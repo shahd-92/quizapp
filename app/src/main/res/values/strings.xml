@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Quiz App</string>
+    <string name="q1">Q 1:</string>
+    <string name="q2">Q 2:</string>
+    <string name="q3">Q 3:</string>
+    <string name="q4">Q 4:</string>
+    <string name="q5">Q 5:</string>
+    <string name="question1">11-5*2=</string>
+    <string name="question2">100 >= 10*9+1 ?</string>
+    <string name="question3">3+3+3-9+1=</string>
+    <string name="question4">3+3+3%2= </string>
+    <string name="question5">x = 5</string>
+    <string name="trueAnswer2">True</string>
+    <string name="falseAnswer2">False</string>
+    <string name="choice1Answer5">x > -5^2</string>
+    <string name="choice2Answer5">x > -5</string>
+    <string name="choice3Answer5">x &lt; -5^2</string>
+    <string name="choice4Answer5">x &lt; -5</string>
+    <string name="Submet">Submet</string>
 </resources>

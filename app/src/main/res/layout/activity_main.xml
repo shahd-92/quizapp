@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -18,12 +17,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/HeaderTextSize"
-        android:text="Q 1:" />
+        android:text="@string/q1" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/QuestionTextSize"
-        android:text="10-5*2=" />
+        android:text="@string/question1" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,27 +33,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/HeaderTextSize"
-        android:text="Q 2:" />
+        android:text="@string/q2" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/QuestionTextSize"
-        android:text="100 >= 10*9+1 ?" />
-    <CheckBox
+        android:text="@string/question2" />
+    <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/answer2"
-        android:text="It is true"/>
+        android:id="@+id/trueAnswer2"
+        android:text="@string/trueAnswer2"/>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/falseAnswer2"
+        android:text="@string/falseAnswer2"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/HeaderTextSize"
-        android:text="Q 3:" />
+        android:text="@string/q3" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/QuestionTextSize"
-        android:text="3+3+3-9+1=" />
+        android:text="@string/question3" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -65,23 +69,54 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/HeaderTextSize"
-        android:text="Q 4:" />
+        android:text="@string/q4" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/QuestionTextSize"
-        android:text="3+3+3%2= " />
+        android:text="@string/question4" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:inputType="numberDecimal"
         android:id="@+id/answer4"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/HeaderTextSize"
+        android:text="@string/q5" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/QuestionTextSize"
+        android:text="@string/question5" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/choice1Answer5"
+        android:text="@string/choice1Answer5"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/choice2Answer5"
+        android:text="@string/choice2Answer5"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/choice3Answer5"
+        android:text="@string/choice3Answer5"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/choice4Answer5"
+        android:text="@string/choice4Answer5"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:onClick="submit"
-        android:text="Submet" />
+        android:text="@string/Submet" />
 </LinearLayout>
 </ScrollView>

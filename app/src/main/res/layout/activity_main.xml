@@ -48,12 +48,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/trueAnswer2"
         android:text="@string/trueAnswer2"/>
-    </RadioGroup>
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/falseAnswer2"
         android:text="@string/falseAnswer2"/>
+</RadioGroup>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

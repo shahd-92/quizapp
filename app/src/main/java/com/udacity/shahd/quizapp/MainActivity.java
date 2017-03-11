@@ -8,12 +8,24 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
+public class MainActivity extends AppCompatActivity {
+    @BindView(R.id.answer4) EditText answer4EditText;
+    @BindView(R.id.answer1) EditText answer1EditText;
+    @BindView(R.id.answer3) EditText answer3EditText;
+    @BindView(R.id.trueAnswer2) RadioButton trueAnswer2RadioButton;
+    @BindView(R.id.falseAnswer2) RadioButton falseAnswer2RadioButton;
+    @BindView(R.id.choice1Answer5) CheckBox choice1Answer5CheckBox;
+    @BindView(R.id.choice2Answer5) CheckBox choice2Answer5CheckBox;
+    @BindView(R.id.choice3Answer5) CheckBox choice3Answer5CheckBox;
+    @BindView(R.id.choice4Answer5) CheckBox choice4Answer5CheckBox;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
     }
 
     /**
@@ -46,17 +58,24 @@ public class MainActivity extends AppCompatActivity {
     public int checkAnswer1(){
         int answer1=0;
         try {
-            answer1 = Integer.parseInt(((EditText) findViewById(R.id.answer1)).getText().toString());
-        }catch (NumberFormatException nfe){
-                nfe.getStackTrace();
+            String a1=answer1EditText.getText().toString();
+            answer1 = Integer.parseInt(a1);
+        }catch (Exception e){
+                e.getStackTrace();
             }
         if (answer1==1)
             return 1;
         else return 0;
     }
     public int checkAnswer2(){
-        boolean trueAnswer2 = ((RadioButton)findViewById(R.id.trueAnswer2)).isChecked();
-        boolean falseAnswer2 = ((RadioButton)findViewById(R.id.falseAnswer2)).isChecked();
+        boolean trueAnswer2= false;
+        boolean falseAnswer2 = false;
+        try {
+        trueAnswer2= trueAnswer2RadioButton.isChecked();
+        falseAnswer2= falseAnswer2RadioButton.isChecked();}
+        catch (NullPointerException e){
+            e.getStackTrace();
+        }
         if (falseAnswer2)
         return 1;
         else return 0;
@@ -65,8 +84,8 @@ public class MainActivity extends AppCompatActivity {
     public int checkAnswer3(){
         int answer3 =0;
         try {
-            answer3=Integer.parseInt(((EditText)findViewById(R.id.answer3)).getText().toString());
-        }catch (NumberFormatException nfe){
+            answer3=Integer.parseInt(answer3EditText .getText().toString());
+        }catch (Exception nfe){
             nfe.getStackTrace();
         }
         if (answer3==1)
@@ -75,9 +94,10 @@ public class MainActivity extends AppCompatActivity {
     }
     public int checkAnswer4(){
         int answer4 = 0;
+
         try{
-            answer4=Integer.parseInt(((EditText)findViewById(R.id.answer4)).getText().toString());
-        }catch (NumberFormatException nfe){
+            answer4=Integer.parseInt(answer4EditText.getText().toString());
+        }catch (Exception nfe){
             nfe.getStackTrace();
         }
         if (answer4==1)
@@ -85,10 +105,18 @@ public class MainActivity extends AppCompatActivity {
         else return 0;
     }
     public int checkAnswer5(){
-        boolean choice1Answer5 = ((CheckBox)findViewById(R.id.choice1Answer5)).isChecked();
-        boolean choice2Answer5 = ((CheckBox)findViewById(R.id.choice2Answer5)).isChecked();
-        boolean choice3Answer5 = ((CheckBox)findViewById(R.id.choice3Answer5)).isChecked();
-        boolean choice4Answer5 = ((CheckBox)findViewById(R.id.choice4Answer5)).isChecked();
+        boolean choice1Answer5=false ;
+        boolean choice2Answer5=false ;
+        boolean choice3Answer5=false ;
+        boolean choice4Answer5=false ;
+        try {
+             choice1Answer5 = choice1Answer5CheckBox.isChecked();
+             choice2Answer5 = choice2Answer5CheckBox.isChecked();
+             choice3Answer5 = choice3Answer5CheckBox.isChecked();
+             choice4Answer5 = choice4Answer5CheckBox.isChecked();
+        }catch (NullPointerException npe){
+            npe.getStackTrace();
+        }
         if (choice3Answer5&&choice2Answer5)
             return 2;
         else if(choice3Answer5||choice2Answer5)

@@ -39,11 +39,16 @@
         android:layout_height="wrap_content"
         style="@style/QuestionTextSize"
         android:text="@string/question2" />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/trueAnswer2"
         android:text="@string/trueAnswer2"/>
+    </RadioGroup>
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
